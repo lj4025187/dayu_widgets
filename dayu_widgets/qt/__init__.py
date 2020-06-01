@@ -6,15 +6,10 @@
 # Email : muyanru345@163.com
 ###################################################################
 
-try:
-    from PySide2.QtCore import *
-    from PySide2.QtGui import *
-    from PySide2.QtWidgets import *
-    from PySide2.QtSvg import QSvgRenderer
-except ImportError:
-    from PySide.QtCore import *
-    from PySide.QtGui import *
-    from PySide.QtSvg import QSvgRenderer
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
+from PySide2.QtSvg import QSvgRenderer
 
 
 class MCacheDict(object):
@@ -34,7 +29,7 @@ class MCacheDict(object):
             data_content = f.read()
             if replace_color is not None:
                 data_content = data_content.replace('#555555', replace_color)
-            self._render.load(QByteArray(data_content))
+            self._render.load(QByteArray(data_content.encode()))
             pix = QPixmap(128, 128)
             pix.fill(Qt.transparent)
             painter = QPainter(pix)

@@ -33,7 +33,8 @@ class MAlert(QWidget):
     ErrorType = 'error'
 
     def __init__(self, text='', parent=None, flags=0):
-        super(MAlert, self).__init__(parent, flags)
+        # super(MAlert, self).__init__(parent, flags)
+        super(MAlert, self).__init__(parent)
         self.setAttribute(Qt.WA_StyledBackground)
         self._icon_label = MAvatar()
         self._icon_label.set_dayu_size(dayu_theme.tiny)

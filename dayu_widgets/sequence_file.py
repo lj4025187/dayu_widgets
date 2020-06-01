@@ -8,7 +8,7 @@
 
 import functools
 
-from dayu_path import DayuPath
+# from dayu_path import DayuPath
 from dayu_widgets.check_box import MCheckBox
 from dayu_widgets.field_mixin import MFieldMixin
 from dayu_widgets.label import MLabel

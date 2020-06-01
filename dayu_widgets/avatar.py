@@ -22,7 +22,8 @@ class MAvatar(QLabel):
     """
 
     def __init__(self, parent=None, flags=0):
-        super(MAvatar, self).__init__(parent, flags)
+        # super(MAvatar, self).__init__(parent, flags)
+        super(MAvatar, self).__init__(parent)
         self._default_pix = MPixmap('user_fill.svg')
         self._pixmap = self._default_pix
         self._dayu_size = 0

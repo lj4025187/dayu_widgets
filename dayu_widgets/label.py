@@ -25,7 +25,8 @@ class MLabel(QLabel):
     H4Level = 4
 
     def __init__(self, text='', parent=None, flags=0):
-        super(MLabel, self).__init__(text, parent, flags)
+        # super(MLabel, self).__init__(text, parent, flags)
+        super(MLabel, self).__init__(text, parent)
         self.setTextInteractionFlags(Qt.TextBrowserInteraction | Qt.LinksAccessibleByMouse)
         self.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         self._actual_text = text

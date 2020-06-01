@@ -8,6 +8,8 @@
 """
 MLoading
 """
+from PySide2.QtCore import QByteArray
+
 from dayu_widgets import dayu_theme
 from dayu_widgets.qt import QWidget, QSize, MPixmap, QPropertyAnimation, Qt, Property, QPainter, \
     QFrame, QSizePolicy, QGridLayout
@@ -29,7 +31,8 @@ class MLoading(QWidget):
         self._loading_ani.setTargetObject(self)
         # self.loading_ani.setEasingCurve(QEasingCurve.InOutQuad)
         self._loading_ani.setDuration(1000)
-        self._loading_ani.setPropertyName('rotation')
+        # self._loading_ani.setPropertyName('rotation')
+        self._loading_ani.setPropertyName(QByteArray('rotation'.encode()))
         self._loading_ani.setStartValue(0)
         self._loading_ani.setEndValue(360)
         self._loading_ani.setLoopCount(-1)

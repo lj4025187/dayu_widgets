@@ -15,4 +15,5 @@ class MDockWidget(QDockWidget):
     """
 
     def __init__(self, title='', parent=None, flags=0):
-        super(MDockWidget, self).__init__(title, parent=parent, flags=flags)
+        # super(MDockWidget, self).__init__(title, parent=parent, flags=flags)
+        super(MDockWidget, self).__init__(title, parent=parent)
